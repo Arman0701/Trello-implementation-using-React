@@ -1,0 +1,15 @@
+.boardItem {
+    width: 30%;
+    height: 400px;
+    padding: 15px;
+    margin: 25px 0;
+    border: 2px solid;
+    border-radius: 8px;
+}
+.boardName {
+    font-size: 18px;
+    font-weight: 500;
+}
+.allTaks {
+    font-size: 15px;
+}
