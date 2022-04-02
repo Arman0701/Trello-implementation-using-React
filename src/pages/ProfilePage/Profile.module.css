@@ -1,0 +1,125 @@
+.profilePage {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(90deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+}
+.profile {
+    padding: 25px 20px;
+    margin: 25px 0;
+    width: 100%;
+    box-shadow: 0 0 20px 5px white;
+}
+.profileHeader {
+    display: flex;
+    align-items: center;
+}
+.editButton, .deleteButton, .addField {
+    color: white;
+    font-weight: 600;
+    padding: 10px 15px;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: 0.15s;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+.editButton:hover, .deleteButton:hover, .addField:hover {
+    border: 2px solid rgba(255, 255, 255, 0.7);
+}
+.aboutUser {
+    display: flex;
+}
+.infoFields {
+    width: 55%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 15px 10px;
+    padding: 15px 10px;
+    border: 2px solid rgba(255, 255, 255, 0.2); 
+}
+.profileInput {
+    width: 100%;
+    padding: 3px 5px;
+    margin:  15px 0;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    background: transparent;
+    transition: 0.15s;
+}
+.profileInput::placeholder{
+    color: white;
+}
+.profileInput:focus, .profileInput:hover {
+    border-color: rgba(255, 255, 255, 0.7);
+}
+.profileInput:first-child {
+    margin-top: 0;
+}
+.profileInput:last-child {
+    margin-bottom: 0;
+}
+.social {
+    color: white;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.platform {
+    cursor: pointer;
+    padding: 10px 15px;
+    margin-right: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+    transition: 0.15s;
+}
+.platform:hover {
+    border-color: rgba(255, 255, 255, 0.7);
+}
+.platformImage {
+    font-size: 40px;
+}
+.imageBlock {
+    display: flex;
+    flex-direction: column;
+    width: 45vw;
+    padding-right: 10px;
+}
+.userImage {
+    background: rgb(102, 141, 12);
+    align-self: end;
+    width: 15vw;
+    height: 15vw;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.15s;
+    color: white;
+    overflow: hidden;
+    background: url('C:\Users\Dell\Desktop\Apps\Personal\desktop.jpg');
+    background-size: 200% ;
+    background-position: center center;
+    margin-bottom: 15px;
+}
+.blured {
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+.userImage:hover .blured {
+    display: flex;
+    backdrop-filter: blur(3px);
+}
+.userBiography {
+    color: white;
+    width: 100%;
+    padding: 5px;
+    margin: 0 10px;
+    resize: none;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    background: rgba(255, 255, 255, 0.2);
+}
+.userBiography::placeholder {
+    color: white;
+}

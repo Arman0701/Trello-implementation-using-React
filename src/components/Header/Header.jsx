@@ -8,63 +8,83 @@ import plusIcon from "../../assets/icons/plusIcon.svg";
 
 import { Link } from "react-router-dom";
 
-export default function Header({ createTask, createBoard, login, signup, logout, boards, profile, settings }) {
+export default function Header({ 
+    login, signup,
+    logout, logoutHandler,
+    boards, boardsHandler,
+    profile, profileHandler,
+    settings, settingsHandler,
+    createTask, createTaskHandler,
+    createBoard, createBoardHandler,
+}) {
     return (
         <div className={style.header}>
-            <div className={style.logo}>
-                <div className={style.logoImage}></div>
-                Trello
-            </div>
+            <Link to='/home'>
+                <div className={style.logo}>
+                    <div className={style.logoImage}></div>
+                    Trello
+                </div>
+            </Link>
             <div className={style.buttons}>
                 {createTask && (
-                    <div className={style.button}>
-                        <img className={style.btnImage} src={plusIcon} alt="555"/>
+                    <div onClick={createTaskHandler} className={style.button}>
+                        <img className={style.btnImage} src={plusIcon} alt="icons"/>
                         Create task
                     </div>
                 )}
                 {boards && (
-                    <div className={style.button}>
-                        <img className={style.btnImage} src={diamondIcon} alt="555"/>
-                        Boards
-                    </div>
+                    <Link to='/home'>
+                        <div onClick={boardsHandler} className={style.button}>
+                            <img className={style.btnImage} src={diamondIcon} alt="icons"/>
+                            Boards
+                        </div>
+                    </Link>
                 )}
                 {createBoard && (
-                    <div className={style.button}>
-                        <img className={style.btnImage} src={plusIcon} alt="555"/>
+                    <div onClick={createBoardHandler} className={style.button}>
+                        <img className={style.btnImage} src={plusIcon} alt="icons"/>
                         Create board
                     </div>
                 )}
                 {profile && (
-                    <div className={style.button}>
-                        <img className={style.btnImage} src={userIcon} alt="555" />
-                        Profile
-                    </div>
+                    <Link to='/profile'>
+                        <div onClick={profileHandler} className={style.button}>
+                            <img className={style.btnImage} src={userIcon} alt="icons" />
+                            Profile
+                        </div>
+                    </Link>
                 )}
                 {settings && (
-                    <div className={style.button}>
-                        <img className={style.btnImage} src={gearIcon} alt="555" />
-                        Settings
-                    </div>
+                    <Link to='/settings'>
+                        <div onClick={settingsHandler} className={style.button}>
+                            <img className={style.btnImage} src={gearIcon} alt="icons" />
+                            Settings
+                        </div>
+                    </Link>
                 )}
                 {login && 
                     <Link to='/log-in' >
                         <div className={style.button}>
-                            <img className={style.btnImage_rotated} src={loginIcon} alt="555" />
+                            <img className={style.btnImage_rotated} src={loginIcon} alt="icons" />
                             Log in
                         </div>
                     </Link>
                 }
                 {signup && (
-                    <div className={style.button}>
-                        <img className={style.btnImage} src={loginIcon} alt="555" />
-                        Sign up
-                    </div>
+                    <Link to='/sign-up'>
+                        <div className={style.button}>
+                            <img className={style.btnImage} src={loginIcon} alt="icons" />
+                            Sign up
+                        </div>
+                    </Link>
                 )}
                 {logout && (
-                    <div className={style.button}>
-                        <img className={style.btnImage} src={signinIcon} alt="555" />
-                        Logout
-                    </div>
+                    <Link to='/'>
+                        <div onClick={logoutHandler} className={style.button}>
+                            <img className={style.btnImage} src={signinIcon} alt="icons" />
+                            Logout
+                        </div>
+                    </Link>
                 )}
             </div>
         </div>

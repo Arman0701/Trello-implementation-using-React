@@ -17,7 +17,7 @@ export default function BoardSinglePage() {
     useEffect(() => {
         if (!localState) {
             getData(`https://624084882aeb48a9af74b006.mockapi.io/tasks/?boardID=${params.boardID}`)
-            .then(res => setLocalState(res.items[0]));
+            .then(res => setLocalState(res[0]));
         }
     }, [localState, params.boardID]);
 
