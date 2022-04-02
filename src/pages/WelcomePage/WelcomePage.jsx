@@ -1,19 +1,10 @@
-import style from "./style.module.css";
-import Logo from "../../components/Logo/Logo";
-import { Link } from "react-router-dom";
+import style from "./WelcomePage.module.css";
+import Header from "../../components/Header/Header";
  
-export default function Login({ toggleLoginWindow }) {
+export default function Login() {
     return (
         <div>
-            <div className={style.header}>
-                <Logo />
-                <div className={style.buttons}>
-                    <Link to='/sign-in'>
-                        <div onClick={toggleLoginWindow} className={style.button}>Login</div>
-                    </Link>
-                    <div className={style.button}>Sign up</div>
-                </div>
-            </div>
+            <Header login signup />
             <section className={style.sec1}>
                 <div className={style.desc1}>
                     <p className={style.title}>Trello helps teams move work forward.</p>

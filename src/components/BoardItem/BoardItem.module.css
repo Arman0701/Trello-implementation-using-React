@@ -1,0 +1,30 @@
+.boardItem {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 25.5%;
+    max-width: 30%;
+    padding: 15px;
+    margin: 25px 0;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.15s ease-in-out;
+}
+.boardImage {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+}
+.boardName {
+    font-size: 18px;
+    font-weight: 500;
+}
+.allTasks {
+    font-size: 15px;
+}

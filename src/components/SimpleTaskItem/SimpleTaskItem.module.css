@@ -1,0 +1,46 @@
+.simpleTaskItem {
+    margin: 10px 0;
+    border: 2px solid white;
+    border-style: solid;
+    border-radius: 8px;
+    color: white;
+    padding: 5px;
+}
+.taskNameBlock {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.taskName {
+    width: 90%;
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 18px;
+}
+.taskName::placeholder {
+    color: white;
+    font-size: 18px;
+}
+.fa-marker {
+    padding: 5px;
+    border-radius: 3px;
+    background: rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+}
+.priority {
+    margin: 10px 0;
+    justify-self: end;
+    display: inline-block;
+    padding: 3px 5px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+.description {
+    width: 100%;
+    resize: none;
+    background: none;
+    border: none;
+    color: white;
+}

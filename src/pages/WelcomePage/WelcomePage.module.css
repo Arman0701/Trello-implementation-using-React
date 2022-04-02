@@ -1,53 +1,11 @@
-.loginPage {
-    width: 100%;
-}
-.header {
-    position: sticky;
-    top: 0;
-    padding: 15px 25px;
-    background: #EDEAFF;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.buttons {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 12%;
-}
-.button {
-    color: rgb(75, 75, 226);
-    font-size: 20px;
-    padding: 5px 8px;
-    border: 2px solid white;
-    background: white;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: 500;
-}
-.button:nth-child(1) {
-    background: transparent;
-    border: none;
-}
-.button:nth-child(2) {
-    transition: 0.15s;
-}
-.button:nth-child(1):hover {
-    text-decoration: underline;
-}
-.button:nth-child(2):hover {
-    border-color: rgb(75, 75, 226);
-}
 .sec1, .sec2 {
     display: flex;
     align-items: center;
     background: #EDEAFF;
     padding: 0 70px;
-    height: 90vh;
 }
 .sec1Image {
+    margin-top: 25px;
     width: 30%;
     height: 80vh;
     background: url('../../assets/images/hero.png');
@@ -79,7 +37,7 @@
 }
 .desc1 .subscribeForm .subInput {
     width: 75%;
-    height: 100%;
+    /* height: 100%; */
     padding: 5px;
     font-size: 19px;
     border: 2px solid transparent;
@@ -149,4 +107,8 @@
     font-size: 20px;
     font-weight: 500;
     padding-bottom: 50px;
+}
+.sec1, .sec2 {
+    background: rgb(34,193,195);
+    background: linear-gradient(90deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
 }

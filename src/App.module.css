@@ -2,11 +2,15 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Open Sans", serif;
+  font-family: "Fredoka", serif;
 }
 input, button, textarea {
   outline: none;
 }
 a {
+  outline: none;
   text-decoration: none;
+}
+a:focus, a:visited, a:active {
+  color: white;
 }

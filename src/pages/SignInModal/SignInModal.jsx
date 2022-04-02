@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import { useRef } from 'react';
-import styles from './style.module.css';
+import style from './SignInModal.module.css';
 
 export default function Modal({ toggleLoginWindow }) {
     const navigate = useNavigate();
@@ -20,17 +20,17 @@ export default function Modal({ toggleLoginWindow }) {
     }
 
     return (
-        <div className={styles.modalWrapper}>
-            <div className={styles.modal}>
-                <div onClick={toggleLoginWindow} className={styles.modalLogo}>
-                    <div className={styles.modalLogoImage}></div>
+        <div className={style.modalWrapper}>
+            <div className={style.modal}>
+                <div onClick={toggleLoginWindow} className={style.modalLogo}>
+                    <div className={style.modalLogoImage}></div>
                     Trello
                 </div>
-                <div className={styles.modalMain}>
-                    <p className={styles.modalTitle}>Login to Trello</p>
-                    <input onKeyDown={handleKeyPress} ref={inputRef} placeholder='Enter login' autoFocus type="text" className={styles.loginInput} />
-                    <input onKeyDown={handleKeyPress} ref={passwordRef} placeholder='Enter password' type="text" className={styles.passInput} />
-                    <div onClick={handleUserLogin} className={styles.submitButton}>Log in</div>
+                <div className={style.modalMain}>
+                    <p className={style.modalTitle}>Login to Trello</p>
+                    <input onKeyDown={handleKeyPress} ref={inputRef} placeholder='Enter login' autoFocus type="text" className={style.loginInput} />
+                    <input onKeyDown={handleKeyPress} ref={passwordRef} placeholder='Enter password' type="password" className={style.passInput} />
+                    <div onClick={handleUserLogin} className={style.submitButton}>Log in</div>
                 </div>
             </div>
         </div>

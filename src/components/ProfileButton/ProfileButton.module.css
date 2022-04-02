@@ -1,0 +1,14 @@
+.profileBtn {
+    font-size: 18px;
+    font-weight: 700;
+    color: rgb(75, 75, 226);
+    padding: 10px 15px;
+    border: 2px solid rgb(75, 75, 226);
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.15s;
+}
+.profileBtn:hover {
+    color: white;
+    background: rgb(75, 75, 226);
+}

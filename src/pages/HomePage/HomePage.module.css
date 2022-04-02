@@ -1,0 +1,22 @@
+.homePage {
+    min-height: 100vh;
+}
+.main {
+    min-height: 94.7vh;
+    background: rgb(34,193,195);
+    background: linear-gradient(80deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+}
+.blur {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    min-height: 94.7vh;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(8px); 
+}
+.items {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}

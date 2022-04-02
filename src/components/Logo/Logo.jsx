@@ -1,4 +1,4 @@
-import style from './style.module.css'
+import style from './Logo.module.css'
 
 export default function Logo() {
 

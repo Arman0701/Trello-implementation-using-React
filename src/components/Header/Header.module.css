@@ -1,0 +1,55 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 15px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+    background: rgb(34,193,195);
+    background: linear-gradient(90deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+}
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 19px;
+    cursor: pointer;
+    color: white;
+}
+.logoImage {
+    width: 20px;
+    height: 20px;
+    background: url('../../assets/images/logo.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-right: 8px;
+}
+.buttons {
+    display: flex;
+    align-items: center;
+}
+.button {
+    display: flex;
+    align-items: center;
+    margin: 0 10px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.15s;
+    color: white;
+    padding: 2px;
+    border-bottom: 2px solid transparent;
+}
+.button:hover {
+    border-bottom: 2px solid white;
+}
+.btnImage {
+    margin-right: 5px;
+    width: 18px;
+    height: 18px;
+    color: white;
+}
+.btnImage_rotated {
+    margin-right: 5px;
+    transform: rotate(-180deg);
+    width: 18px;
+    height: 18px;
+    color: white;
+}
