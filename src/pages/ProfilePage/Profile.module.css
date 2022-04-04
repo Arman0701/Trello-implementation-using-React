@@ -36,10 +36,18 @@
     padding: 15px 10px;
     border: 2px solid rgba(255, 255, 255, 0.2); 
 }
-.profileInput {
+.profileLabel {
     width: 100%;
+    color: white;
+    margin-bottom: 15px;
+}
+.labelText {
+    margin-bottom: 5px;
+}
+.profileInput {
+    width: 50vw;
     padding: 3px 5px;
-    margin:  15px 0;
+    /* margin:  10px 0; */
     border: 2px solid rgba(255, 255, 255, 0.2);
     color: white;
     background: transparent;
@@ -110,6 +118,12 @@
 .userImage:hover .blured {
     display: flex;
     backdrop-filter: blur(3px);
+}
+.bioLabelText {
+    color: white;
+    font-size: 18px;
+    font-size: 500;
+    margin-left: 10px;
 }
 .userBiography {
     color: white;

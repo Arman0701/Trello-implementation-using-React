@@ -22,3 +22,28 @@
     padding: 10px 15px;
     height: min-content;
 }
+.modalInput {
+    width: 100%;
+    padding: 3px 5px;
+    border: 2px solid #52CDCB;
+    border-radius: 8px;
+    margin: 10px 0;
+}
+.modalInput:last-child {
+    margin-bottom: 20px;
+}
+.modalButton {
+    display: inline;
+    font-weight: 600;
+    padding: 8px 10px;
+    border-radius: 8px;
+    border: 2px solid #006765;
+    color: #006765;
+    transition: 0.15s;
+    cursor: pointer;
+    margin-top: 20px !important;
+}
+.modalButton:hover {
+    color: white;
+    background: #006765;
+}

@@ -37,6 +37,7 @@ export default function SimpleTaskItem({ item }) {
                     onChange={handleChange}
                     className={style.taskName}
                     />
+                <i className="fa fa-trash"></i>
                 <i onClick={handleEdit} className="fa fa-marker"></i>
             </div>
             <div>

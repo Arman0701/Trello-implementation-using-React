@@ -1,45 +1,53 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useReducer } from 'react';
 
 import style from './HomePage.module.css';
 import Header from '../../components/Header/Header';
 import BoardItem from '../../components/BoardItem/BoardItem';
-import Modal from '../../components/Modal/Modal'
+import Modal from '../../components/Modal/Modal';
 
+import sendData from '../../helpers/sendData';
 import getData from '../../helpers/getData';
 import { v1 as getID } from 'uuid'
 
 export default function HomePage() {
     const urlInputRef = useRef(null);
     const nameInputRef = useRef(null);
-    const [state, dispatch] = useState();
-    const [ modalIsActive, setModalIsActive ] = useState(true);
+    const [apiData, setApiData] = useState(null);
+    const [modalIsActive, setModalIsActive] = useState(true);
 
     useEffect(() => {
-        if (!state) {
+        if (!apiData) {
             getData("https://624084882aeb48a9af74b006.mockapi.io/boards/")
             .then(res => {
-                dispatch({
-                    type: 'load',
-                    value: res,
-                })
+                setApiData(res);
             })
         }
-    }, [state]);
+    }, [apiData]);
 
     useEffect(() => {
-        console.log(state);
-    })
+        console.log(apiData);
+        // sendData("https://624084882aeb48a9af74b006.mockapi.io/boards/", apiData);
+    }, [apiData]);
 
     function addNewBoard() {
-        dispatch({
-            type: 'addBoard',
-            value: [{
+        // dispatch({
+        //     type: 'addBoard',
+        //     value: {
+        //         id: getID(),
+        //         name: nameInputRef.current.value,
+        //         imageURL: urlInputRef.current.value,
+        //         tasks: 0
+        //     }
+        // })  
+        setApiData([
+            ...apiData,
+            {
                 id: getID(),
                 name: nameInputRef.current.value,
                 imageURL: urlInputRef.current.value,
                 tasks: 0
-            }]
-        })
+            }
+        ])
         urlInputRef.current.value = '';
         nameInputRef.current.value = '';
     }
@@ -53,7 +61,14 @@ export default function HomePage() {
             <div className={style.main}>
                 <div className={style.blur}>
                     <div className={style.items}>
-                        { state ? state.value.map(item => <BoardItem key={item.id} board={item} />) : null }
+                        { apiData && apiData.map(item => 
+                            <BoardItem 
+                                board={item} 
+                                state={apiData}
+                                setState={setApiData}
+                                key={item.id} 
+                            />
+                        )}
                     </div>
                 </div>
             </div>

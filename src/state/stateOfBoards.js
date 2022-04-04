@@ -1,8 +1,11 @@
 export default function reducer(state, action){
     switch(action.type){
         case 'load':
-            return [action.value];
+            return [action.payload];
         case 'addBoard':
-            return [...state, action.value];
+            return [...state, action.payload];
+        
+        default:
+            return state;
     }
 }
